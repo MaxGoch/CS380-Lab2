@@ -59,7 +59,15 @@ class BinarySearchTree{
    post-order traversal
    */
    public void postOrderTraversal(Node root){
-      //implement me
+      //Base Case:
+      if (root == null){
+         return;
+      }
+
+      postOrderTraversal(node.left);
+      postOrderTraversal(node.right);
+      System.out.printf("%d ", root.value);
+
    }
    
    
