@@ -50,7 +50,14 @@ class BinarySearchTree{
    in-order traversal
    */
    public void inOrderTraversal(Node root){
-      //implement me
+      //Base Case:
+      if (root == null){
+         return;
+      }
+
+      inOrderTraversal(root.left);
+      System.out.printf("%d ",root.value);
+      inOrderTraversal(root.right);
    }
    
    
