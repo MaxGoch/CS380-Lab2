@@ -84,7 +84,7 @@ class BinarySearchTree{
       if (root.left == null){
          return root.value;
       }
-      return getMix(root.left);
+      return getMin(root.left);
    }
   
   
