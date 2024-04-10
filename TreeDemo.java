@@ -15,9 +15,13 @@ class BinarySearchTree{
    Node root;
    
    
-   /*
-   recursive insert method
-   */
+
+
+   /**
+    * Recursive method that will insert the provided value.
+    * @param root Root node from Binary Search Tree.
+    * @param value Value to be inserted.
+    */
    public Node insert(Node root, int value){
       //base case
       if(root == null){
@@ -36,10 +40,12 @@ class BinarySearchTree{
    }
    
    
-   
-   /*
-   pre-order traversal
-   */
+
+
+   /**
+    * Recursive method that prints out the Given Binary search tree in preOrder.
+    * @param root Root of binary Search Tree.
+    */
    public void preOrderTraversal(Node root){
       //Base Case:
       if (root == null){
@@ -53,9 +59,11 @@ class BinarySearchTree{
 
    
    
-   /*
-   in-order traversal
-   */
+
+   /**
+    * Recursive method that prints out the Given Binary search tree inOrder.
+    * @param root Root of binary Search Tree.
+    */
    public void inOrderTraversal(Node root){
       //Base Case:
       if (root == null){
@@ -68,10 +76,11 @@ class BinarySearchTree{
    }
    
    
-   
-   /*
-   post-order traversal
-   */
+
+   /**
+    * Recursive method that prints out the Given Binary search tree in postOrder.
+    * @param root Root of binary Search Tree.
+    */
    public void postOrderTraversal(Node root){
       //Base Case:
       if (root == null){
@@ -86,10 +95,14 @@ class BinarySearchTree{
    
    
    
-   /*
-   a method to find the node in the tree
-   with a specific value
-   */
+
+
+   /**
+    * Method trys to find the given key in the Binary search tree.
+    * @param root Root node of tree.
+    * @param key Value to be found in the tree.
+    * @return Returns either True if found or False if value is not found.
+    */
    public boolean find(Node root, int key){
 	  //Base Case:
       if(root.value == key){
@@ -106,12 +119,13 @@ class BinarySearchTree{
       }
    }
    
-   
-   
-   /*
-   a method to find the node in the tree
-   with a smallest key
-   */
+
+
+   /**
+    * Method returns the minimum value in the binary search tree.
+    * @param root Root node of the binary search tree.
+    * @return Returns the minimum value in the tree.
+    */
    public int getMin(Node root){
       //implement me
       if (root.left == null){
@@ -120,12 +134,13 @@ class BinarySearchTree{
       return getMin(root.left);
    }
   
-  
-  
-   /*
-   a method to find the node in the tree
-   with a largest key
-   */
+
+
+   /**
+    * Method returns the largest value in the binary search tree.
+    * @param root Root node of tree.
+    * @return Returns the largest value in the tree.
+    */
    public int getMax(Node root){
 	  //implement me
       if (root.right == null){
@@ -133,13 +148,14 @@ class BinarySearchTree{
       }
       return getMax(root.right);
    }
-   
-   
-   
-   /*
-   this method will not compile until getMax
-   is implemented
-   */
+
+
+   /**
+    * Method deletes the given value from the binary search tree.
+    * @param root Root node of tree.
+    * @param key Value to be removed from tree.
+    * @return Returns node.
+    */
    public Node delete(Node root, int key){
       
       if(root == null){
